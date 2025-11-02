@@ -1,0 +1,40 @@
+- title: 检查正常创建部门是否成功！
+  keyword: create_org
+  meth: post
+  url: https://qyapi.weixin.qq.com/cgi-bin/department/create
+  data:
+    name: 广州研发中心
+    parentid: 1
+  expect:
+    errcode: 0
+    errmsg: created
+
+- title: 检查创建部门时传入部门名字长度为33个字符报错信息是否正确！
+  keyword: create_org
+  meth: post
+  url: https://qyapi.weixin.qq.com/cgi-bin/department/create
+  data:
+    name: 一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三
+    parentid: 1
+  expect:
+    errcode: 60001
+
+- title: 检查创建部门时传入部门名字包含特殊字符报错信息是否正确！
+  keyword: create_org
+  meth: post
+  url: https://qyapi.weixin.qq.com/cgi-bin/department/create
+  data:
+    name: 一二三四?"<
+    parentid: 1
+  expect:
+    errcode: 60009
+
+- title: 检查创建部门时传入部门名字为空时报错信息是否正确！
+  keyword: create_org
+  meth: post
+  url: https://qyapi.weixin.qq.com/cgi-bin/department/create
+  data:
+    name: ""
+    parentid: 1
+  expect:
+    errcode: 40058

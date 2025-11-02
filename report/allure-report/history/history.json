@@ -1,0 +1,1 @@
+{"6adf97f83acf6453d4a6a4b1070f3754":{"statistic":{"failed":0,"broken":1,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"e1e4c144df23aa67","status":"broken","statusDetails":"AttributeError: 'str' object has no attribute 'isascii'","time":{"start":1762087444623,"stop":1762087444623,"duration":0}}]}}

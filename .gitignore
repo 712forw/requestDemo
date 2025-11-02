@@ -1,0 +1,10 @@
+# Created by pytest automatically.
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+# py缓存
+__pycache__/
